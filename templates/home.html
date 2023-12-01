@@ -1,46 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practise</title>
-  </head>
-  <body>
-    <p>Lenght of number: {{num | length}}</p>
-    <p>Add slash: {{"I'm Jai" | addslashes }}</p>
-    <p>Add slash: {{name | addslashes }}</p>
-    <p>Capitalize the name: {{ name | capfirst }}</p>
-    <p>center: {{ "Jai" | center:"15" }}</p>
-    <p>Cut: {{ cut | cut:" " }}</p>
-    <p>Empty: {{ empty | default:"nothing" }}</p>
-    <p>Sort dictonary:{{ dic | dictsort:"name" }}</p>
-    <p>Sort dictonary:{{ a | divisibleby:"3" }}</p>
-    <p>filesizeformat:{{ a | filesizeformat }}</p>
-    <p>first item :{{ num | first }}</p>
-    <p>Join a list item :{{ num | join:" // " }}</p>
-    <p>last item :{{ num | last }}</p>
-    <p>list length :{{ num | length }}</p>
-    <p>make lowercase :{{ name | lower }}</p>
-    <p>make Upper :{{ name | upper }}</p>
-    <p>make list using string :{{ "Hello world" | make_list }}</p>
-    <p>Random number from the lsit:{{ num | random }}</p>
-    <p>List slice:{{ num | slice:":1" }}</p>
-    <p>Slugify :{{ name | slugify }}</p>
-    <p>Capitalize :{{ name | title }}</p>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 
-    <h1>Earthly practise</h1>
-    <p>Join list element {{ num | join:" - " }}</p>
-    <p>First later capital {{'christmas' | capfirst}}</p>
-    <p>Cut {{"Python is Fun" | cut:" "}}</p>
-    <p>Cut {{fruit | first}}</p>
-    <p>Linke number {{fruit | linenumbers}}</p>
-    <p>Time filter {{"10:30:00.000123+02:00" | time:"H:i"}}</p>
-    <p>truncatechars {{'Happy coding' | truncatechars:6}}</p>
-    <h1>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis aliquid
-      quidem similique corporis corrupti quibusdam, ducimus soluta officiis
-      voluptas dolorum dicta rem quaerat sed libero, eius reprehenderit ut ad
-      odit!
-    </h1>
-  </body>
-</html>
+<div class='container'>
+  <p>Lenght of number: {{num | length}}</p>
+  <p>Add slash: {{"I'm Jai" | addslashes }}</p>
+  <p>Add slash: {{name | addslashes }}</p>
+  <p>Capitalize the name: {{ name | capfirst }}</p>
+  <p>center: {{ "Jai" | center:"15" }}</p>
+  <p>Cut: {{ cut | cut:" " }}</p>
+  <p>Empty: {{ empty | default:"nothing" }}</p>
+  <p>Sort dictonary:{{ dic | dictsort:"name" }}</p>
+  <p>Sort dictonary:{{ a | divisibleby:"3" }}</p>
+  <p>filesizeformat:{{ a | filesizeformat }}</p>
+  <p>first item :{{ num | first }}</p>
+  <p>Join a list item :{{ num | join:" // " }}</p>
+  <p>last item :{{ num | last }}</p>
+  <p>list length :{{ num | length }}</p>
+  <p>make lowercase :{{ name | lower }}</p>
+  <p>make Upper :{{ name | upper }}</p>
+  <p>make list using string :{{ "Hello world" | make_list }}</p>
+  <p>Random number from the lsit:{{ num | random }}</p>
+  <p>List slice:{{ num | slice:":1" }}</p>
+  <p>Slugify :{{ name | slugify }}</p>
+  <p>Capitalize :{{ name | title }}</p>
+
+  <h1>Earthly practise</h1>
+  <p>Join list element {{ num | join:" - " }}</p>
+  <p>First later capital {{'christmas' | capfirst}}</p>
+  <p>Cut {{"Python is Fun" | cut:" "}}</p>
+  <p>Cut {{fruit | first}}</p>
+  <p>Linke number {{fruit | linenumbers}}</p>
+  <p>Time filter {{"10:30:00.000123+02:00" | time:"H:i"}}</p>
+  <p>truncatechars {{'Happy coding' | truncatechars:6}}</p>
+  <h1>
+   
+  </h1>
+</div>
+
+{% endblock content %}
